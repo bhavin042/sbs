@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="sbs.bank.DTO">
+	<class name="User" table="USER">
+		<id name="userId" column="USERID">
+			<generator class="assigned" />
+		</id>		
+		<property name="firstName">
+			<column name="FIRSTNAME" length="30" not-null="false" />
+		</property>
+		<property name="lastName">
+			<column name="LASTNAME" length="30" not-null="false" />
+		</property>
+		
+		<property name="address">
+			<column name="ADDRESS" length="60" not-null="false"/>
+		</property>
+		
+		<property name="contact">
+			<column name="CONTACT" length="12" not-null="false"/>
+		</property>
+		
+		<property name="emailId">
+			<column name="EMAILID" length="30" not-null="false"/>
+		</property>
+		
+		<property name="DOB">
+			<column name="DOB" not-null="false"/>
+		</property>
+		
+		<property name="idType">
+			<column name="IDTYPE" length="20" not-null="false"/>
+		</property>
+		
+		<property name="idNo">
+			<column name="IDNO" length="20" not-null="false"/>
+		</property>
+		<property name="securityQues1">
+			<column name="SECURITYQ1" length="40" not-null="false"/>
+		</property>
+		<property name="securityQues2">
+			<column name="SECURITYQ2" length="40" not-null="false"/>
+		</property>
+		
+		<property name="securityQues3">
+			<column name="SECURITYQ3" length="40" not-null="false"/>
+		</property>
+		
+		<property name="securityAns1">
+			<column name="SECURITYA1" length="40" not-null="false"/>
+		</property>
+		
+		<property name="securityAns2">
+			<column name="SECURITYA1" length="40" not-null="false"/>
+		</property>
+		
+		<property name="securityAns3">
+			<column name="SECURITYA1" length="40" not-null="false"/>
+		</property>
+		
+		<property name="roleId">
+			<column name="ROLEID"  not-null="false"/>
+		</property>	
+	</class>
+</hibernate-mapping>
